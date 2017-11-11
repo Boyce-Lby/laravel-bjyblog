@@ -44,7 +44,7 @@ class OAuthController extends Controller
             'github' => 3
         ];
         // 获取用户资料
-        $user = Socialite::driver($service)->user();
+        $user = Socialite::driver($service)->stateless();
 
         // 组合存入session中的值
         $sessionData = [
