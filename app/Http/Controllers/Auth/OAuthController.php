@@ -24,7 +24,7 @@ class OAuthController extends Controller
             'targetUrl' => $_SERVER['HTTP_REFERER']
         ];
         session($data);
-        return Socialite::driver($service)->redirectToProvider();
+        return Socialite::driver($service)->redirect();
     }
 
     /**
