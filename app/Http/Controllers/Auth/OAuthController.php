@@ -18,10 +18,10 @@ class OAuthController extends Controller
      * @return mixed
      */
     public function redirectToProvider(Request $request, $service)
-    {debug($_SERVER['HTTP_REFERER']);
+    {debug(111);
         // 记录登录前的url
         $data = [
-            'targetUrl' => $_SERVER['HTTP_REFERER']
+            'targetUrl' => isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:"http://120.78.214.117"
         ];
         session($data);
         return Socialite::driver($service)->redirect();
