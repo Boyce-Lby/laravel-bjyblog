@@ -22,7 +22,7 @@ class OAuthController extends Controller
         // 记录登录前的url
         $data = [
             'targetUrl' => $_SERVER['HTTP_REFERER']
-        ];
+        ];var_dump($data);
         session($data);
         return Socialite::driver($service)->redirect();
     }
