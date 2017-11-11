@@ -106,7 +106,7 @@ class OAuthController extends Controller
             $sessionData['user']['id'] = $userId;
             $sessionData['user']['email'] = '';
             $sessionData['user']['is_admin'] = 0;
-        }
+        }debug($user->avatar);
         // 下载最新的头像到本地
         $avatarContent = curl_get_contents($user->avatar);
         $avatarPath = public_path('uploads/avatar/'.$userId.'.jpg');
