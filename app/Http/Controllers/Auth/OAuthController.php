@@ -21,7 +21,7 @@ class OAuthController extends Controller
     {
         // 记录登录前的url
         $data = [
-            'targetUrl' => isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:"http://120.78.214.117",
+            'targetUrl' => $_SERVER['HTTP_REFERER']
         ];
         session($data);
         return Socialite::driver($service)->stateless();
