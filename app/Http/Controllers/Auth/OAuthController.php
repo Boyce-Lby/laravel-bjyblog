@@ -106,9 +106,9 @@ class OAuthController extends Controller
             $sessionData['user']['id'] = $userId;
             $sessionData['user']['email'] = '';
             $sessionData['user']['is_admin'] = 0;
-        }var_dump($user);die;
+        }
         // 下载最新的头像到本地
-        $avatarContent = curl_get_contents($user->avatar);
+        $avatarContent = curl_get_contents($user->avatar);var_dump($avatarContent);die;
         $avatarPath = public_path('uploads/avatar/'.$userId.'.jpg');
         // 如果下载失败；则使用默认图片
         if (empty($avatarContent)) {
