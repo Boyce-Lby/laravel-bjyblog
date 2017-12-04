@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')@if(request()->path() !== '/') - {{ $config['WEB_TITLE'] }} @endif</title>
