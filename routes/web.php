@@ -66,10 +66,10 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'auth'], function () {
 });
 
 // 后台登录页面
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-    Route::group(['prefix' => 'login'], function () {
+Route::group(['namespace' => 'Admin'], function () {
+    Route::group( function () {
         // 登录页面
-        Route::get('index', 'LoginController@index');
+        Route::get('admin', 'LoginController@index');
         // 退出
         Route::get('logout', 'LoginController@logout');
     });
