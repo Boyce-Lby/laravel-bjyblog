@@ -67,7 +67,7 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'auth'], function () {
 
 // 后台登录页面
 Route::group(['namespace' => 'Admin'], function () {
-    Route::group( function () {
+    Route::group(function () {
         // 登录页面
         Route::get('admin', 'LoginController@index');
         // 退出
